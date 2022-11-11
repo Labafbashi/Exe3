@@ -35,7 +35,24 @@ internal class Program
         personhandler.SetAge(person4, 32);
         PrintDifferent(persTemp, person4, nameof(person4));
 
+        personhandler.SetWeight(person4, 98);
+        PrintDifferent(persTemp, person4, nameof(person4));
+
+        //*********************************************************************************
+        //Polymorfism
+        //*********************************************************************************
+
+        string error;
+        NumericInputError nError = new NumericInputError();
+        TextInputError tError = new TextInputError();
         
+        Console.Clear();
+        Console.WriteLine(nError.UEMessage());
+
+        Console.WriteLine(tError.UEMessage());
+        
+
+
 
     }
 
