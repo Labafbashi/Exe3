@@ -77,6 +77,7 @@ internal class Program
         Console.WriteLine("Poisonous Status: " + horse.IsPoisonous());
         Console.WriteLine("Domestic Status: " + horse.IsDomestic());
         Console.WriteLine("Animal Usage: " + horse.Usage(2));
+        Console.WriteLine("Life Place: " + horse.LifePlace(1));
         Console.ReadKey();
 
         Dog dog = new Dog();
@@ -92,6 +93,7 @@ internal class Program
         Console.WriteLine("Animal Sound: " + dog.DoSound());
         Console.WriteLine("Poisonous Status: " + dog.IsPoisonous());
         Console.WriteLine("Domestic Status: " + dog.IsDomestic());
+        Console.WriteLine("Life Place: " + dog.LifePlace(1));
         Console.ReadKey();
 
         Hedgehog hh = new Hedgehog();
@@ -107,8 +109,76 @@ internal class Program
         Console.WriteLine("Animal Sound: " + hh.DoSound());
         Console.WriteLine("Poisonous Status: " + hh.IsPoisonous());
         Console.WriteLine("Domestic Status: " + hh.IsDomestic());
+        Console.WriteLine("Life Place: " + hh.LifePlace(0));
         Console.ReadKey();
 
+        Pelican peli = new Pelican();
+        peli.Name = "PPPPPPP";
+        peli.Age = 5;
+        peli.Generation = "Brown";
+        peli.UniqueWeight = 45.87;
+
+        Console.Clear();
+        Console.WriteLine("*************************** Pelican ***************************");
+        Console.WriteLine("Animal Name: " + peli.Name);
+        Console.WriteLine("Animal Age: " + peli.Age.ToString());
+        Console.WriteLine("Animal Generation: " + peli.Generation);
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Unique Properties (Weight): " + peli.UniqueWeight);
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.WriteLine("Animal Sound: " + peli.DoSound());
+        Console.WriteLine("Poisonous Status: " + peli.IsPoisonous());
+        Console.WriteLine("Domestic Status: " + peli.IsDomestic());
+        Console.WriteLine("Life Place: " + peli.LifePlace(2));
+        Console.WriteLine("Is Migratory: " + peli.IsMigratory());
+        Console.WriteLine("Can Swim: " + peli.CanSwim());
+        Console.WriteLine("Max Fly: " + peli.Maxfly().ToString() + " m");
+        Console.ReadKey();
+
+        Flamingo feli = new Flamingo();
+        feli.Name = "PPPPPPP";
+        feli.Age = 5;
+        feli.Generation = "Brown";
+        feli.UniqueLifeStyle = "Long Leg, Crooked Beak";
+
+        Console.Clear();
+        Console.WriteLine("*************************** Flamingo ***************************");
+        Console.WriteLine("Animal Name: " + feli.Name);
+        Console.WriteLine("Animal Age: " + feli.Age.ToString());
+        Console.WriteLine("Animal Generation: " + feli.Generation);
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Unique Properties (Life Style): " + feli.UniqueLifeStyle);
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.WriteLine("Animal Sound: " + feli.DoSound());
+        Console.WriteLine("Poisonous Status: " + feli.IsPoisonous());
+        Console.WriteLine("Domestic Status: " + feli.IsDomestic());
+        Console.WriteLine("Life Place: " + feli.LifePlace(2));
+        Console.WriteLine("Is Migratory: " + feli.IsMigratory());
+        Console.WriteLine("Can Swim: " + feli.CanSwim());
+        Console.WriteLine("Max Fly: " + feli.Maxfly().ToString() + " m");
+        Console.ReadKey();
+
+        Swan swan = new Swan();
+        swan.Name = "PPPPPPP";
+        swan.Age = 5;
+        swan.Generation = "Brown";
+        
+        Console.Clear();
+        Console.WriteLine("*************************** Swan ***************************");
+        Console.WriteLine("Animal Name: " + swan.Name);
+        Console.WriteLine("Animal Age: " + swan.Age.ToString());
+        Console.WriteLine("Animal Generation: " + swan.Generation);
+        Console.WriteLine("Animal Sound: " + swan.DoSound());
+        Console.WriteLine("Poisonous Status: " + swan.IsPoisonous());
+        Console.WriteLine("Domestic Status: " + swan.IsDomestic());
+        Console.WriteLine("Life Place: " + swan.LifePlace(2));
+        Console.WriteLine("Is Migratory: " + swan.IsMigratory());
+        Console.WriteLine("Can Swim: " + swan.CanSwim());
+        Console.WriteLine("Max Fly: " + swan.Maxfly().ToString() + " m");
+        Console.ForegroundColor = ConsoleColor.Red;
+        swan.RootWord();
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.ReadKey();
 
     }
 

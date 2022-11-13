@@ -17,8 +17,6 @@ abstract class Animal
     public string Name { get; set; }
 	public string Generation { get; set; }
 	public int Age { get; set; }
-	public string Type { get; set; }
-
 
 	public abstract string DoSound();
 	public abstract bool IsPoisonous();
