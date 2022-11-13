@@ -6,6 +6,6 @@ class CustomClass2 : UserError
 
     public override string UEMessage()
     {
-        return "This is a custome message for a custom class second.  \n \n  Custom Class 1";
+        return "This is a custome message for a custom class second.  \n \n  Custom Class 2";
     }
 }
