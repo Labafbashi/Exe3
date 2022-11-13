@@ -42,17 +42,25 @@ internal class Program
         //Polymorfism
         //*********************************************************************************
 
-        string error;
         NumericInputError nError = new NumericInputError();
         TextInputError tError = new TextInputError();
         
         Console.Clear();
-        Console.WriteLine(nError.UEMessage());
-
+        Console.WriteLine(nError.UEMessage()+"\n\n");
         Console.WriteLine(tError.UEMessage());
-        
 
+        CustomClass1 cError1 = new CustomClass1();
+        CustomClass2 cError2 = new CustomClass2();
+        CustomClass3 cError3 = new CustomClass3();
 
+        Console.Clear();
+        Console.WriteLine(cError1.UEMessage + "\n \n");
+        Console.WriteLine(cError2.UEMessage + "\n \n");
+        Console.WriteLine(cError3.UEMessage + "\n \n");
+
+        //*********************************************************************************
+        //Inheritance
+        //*********************************************************************************
 
     }
 

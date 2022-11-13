@@ -12,7 +12,7 @@ abstract class Animal
 	public int Age { get; set; }
 
 
-	public abstract string DoSound() { get(); }
+	public abstract string DoSound() { }
 	public abstract bool IsPoisonous() { }
 
 }
