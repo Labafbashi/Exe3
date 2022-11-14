@@ -38,6 +38,9 @@ abstract class Animal
 
 	}
 
-
+	public virtual string Stats()
+	{
+		return Name + " " + Age.ToString() + " " + Generation;
+	}
 
 }

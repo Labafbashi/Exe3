@@ -64,7 +64,7 @@ internal class Program
         //Inheritance
         //*********************************************************************************
         Horse horse = new Horse();
-        horse.Name = "AAAAAAAA";
+        horse.Name = "Horse";
         horse.Age = 7;
         horse.Generation = "Original";
 
@@ -97,7 +97,7 @@ internal class Program
         Console.ReadKey();
 
         Hedgehog hh = new Hedgehog();
-        hh.Name = "BBBBBBB";
+        hh.Name = "Hedgehog";
         hh.Age = 4;
         hh.Generation = "Atelerix";
 
@@ -112,8 +112,25 @@ internal class Program
         Console.WriteLine("Life Place: " + hh.LifePlace(0));
         Console.ReadKey();
 
+        Wolf wolf = new Wolf();
+        wolf.Name = "Wolf";
+        wolf.Age = 4;
+        wolf.Generation = "Atelerix";
+
+        Console.Clear();
+        Console.WriteLine("*************************** Wolf ***************************");
+        Console.WriteLine("Animal Name: " + wolf.Name);
+        Console.WriteLine("Animal Age: " + wolf.Age.ToString());
+        Console.WriteLine("Animal Generation: " + wolf.Generation);
+        Console.WriteLine("Animal Sound: " + wolf.DoSound());
+        Console.WriteLine("Poisonous Status: " + wolf.IsPoisonous());
+        Console.WriteLine("Domestic Status: " + wolf.IsDomestic());
+        Console.WriteLine("Life Place: " + wolf.LifePlace(0));
+        Console.WriteLine("Is Hunter: " + wolf.IsHunter());
+        Console.ReadKey();
+
         Pelican peli = new Pelican();
-        peli.Name = "PPPPPPP";
+        peli.Name = "Pelican";
         peli.Age = 5;
         peli.Generation = "Brown";
         peli.UniqueWeight = 45.87;
@@ -136,7 +153,7 @@ internal class Program
         Console.ReadKey();
 
         Flamingo feli = new Flamingo();
-        feli.Name = "PPPPPPP";
+        feli.Name = "Flamingo";
         feli.Age = 5;
         feli.Generation = "Brown";
         feli.UniqueLifeStyle = "Long Leg, Crooked Beak";
@@ -159,7 +176,7 @@ internal class Program
         Console.ReadKey();
 
         Swan swan = new Swan();
-        swan.Name = "PPPPPPP";
+        swan.Name = "Swan";
         swan.Age = 5;
         swan.Generation = "Brown";
         
@@ -179,6 +196,78 @@ internal class Program
         swan.RootWord();
         Console.ForegroundColor = ConsoleColor.Gray;
         Console.ReadKey();
+
+        WolfMan wm = new WolfMan();
+        wm.Name = "WolfMan";
+        wm.Age = 4;
+        wm.Generation = "Gray Wolf";
+
+        Console.Clear();
+        Console.WriteLine("*************************** Wolf Man ***************************");
+        Console.WriteLine("Animal Name: " + wm.Name);
+        Console.WriteLine("Animal Age: " + wm.Age.ToString());
+        Console.WriteLine("Animal Generation: " + wm.Generation);
+        Console.WriteLine("Animal Sound: " + wm.DoSound());
+        Console.WriteLine("Poisonous Status: " + wm.IsPoisonous());
+        Console.WriteLine("Domestic Status: " + wm.IsDomestic());
+        Console.WriteLine("Life Place: " + wm.LifePlace(0));
+        Console.WriteLine("Is Hunter: " + wm.IsHunter());
+        Console.WriteLine("Interface IPerson Talk: \n");
+        wm.Talk();
+        Console.ReadKey();
+
+        /* 
+         * 13.F: Om vi under utvecklingen kommer fram till att samtliga fåglar behöver ett nytt attribut, i vilken klass bör vi lägga det?
+         * We should add new attributes in the Bird class.
+         * 
+         * 14. F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
+         * We should add new attributes in the Animal class.
+         */
+
+        Console.Clear();
+        Console.WriteLine(">>>>> \t Show Animal Status \t <<<<<<");
+        Console.WriteLine("Horse Status: " + horse.Stats());
+        Console.WriteLine("Dog Status: " + dog.Stats());
+        Console.WriteLine("Hedgehog Status: " + hh.Stats());
+        Console.WriteLine("Wolf Status: " + wolf.Stats());
+        Console.WriteLine("Pelican Status: " + peli.Stats());
+        Console.WriteLine("Flamingo Status: " + feli.Stats());
+        Console.WriteLine("Swan Status: " + swan.Stats());
+        Console.WriteLine("Wolf Man Status: " + wm.Stats());
+        Console.WriteLine("Wolf Status override method: " + wolf.Stats());
+
+        /*
+         * 9. F: Försök att lägga till en häst i listan av hundar. Varför fungerar inte det?
+         * Because they have a different type, we couldn't assign them to each other.
+         * 
+         * 10. F: Vilken typ måste listan vara för att alla klasser skall kunna lagras tillsammans?
+         * It should be an Animal array then we can save all classes of animals.
+         */
+
+        Animal[] animal = { horse, dog, hh, feli, wolf, peli, swan, wm};
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("############ Show array of animals #########");
+        foreach(Animal anim in animal)
+        {
+            Console.WriteLine(anim.Stats());
+        }
+        Console.ForegroundColor = ConsoleColor.Gray;
+
+        /*
+         * 13. F: Förklara vad det är som händer.
+         * Because the Animal class is a parent and the other classes are a child so, the child classes inherit from their parents. 
+         * For this reason, we can create an array from Animal and add all types of classes on each element of array.
+         */
+
+        Console.WriteLine("Call LovelyDog method from the dog identifier.");
+        dog.LovlyDog();
+
+        Console.WriteLine("Call LovelyDog method from the Animal identifier.");
+        /* 
+         * we couldn't access a child method from parents, if it's so then we can break inheritance rules.
+         */
+
 
     }
 
